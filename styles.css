@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #024059;
+  color: white;
+  text-align: center;
+}
+button {
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  border: solid white 1px;
+  background-color: transparent;
+  color: white;
+  border-radius: 5%;
+}
+h1,
+h2 {
+  margin: 1rem;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.color-select,
+.mode-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.open-instructions {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+}
+.instructions {
+  height: 25rem;
+  width: 15rem;
+  position: absolute;
+  top: 10rem;
+  right: 5rem;
+  border: solid 1px white;
+  padding: 1rem;
+  text-align: center;
+}
+.instructions h2 {
+  text-transform: none;
+}
+.splash-screen,
+.game-over-screen {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.captured-pieces {
+  background-color: transparent;
+  border: solid 1px white;
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  height: 35rem;
+  width: 15rem;
+  text-align: center;
+}
+.captured-pieces img {
+  width: 15%;
+}
+.captured-pieces div {
+  height: 50%;
+}
+.captured-pieces h3 {
+  margin: 1rem;
+}
+.turn-display {
+  margin: 1rem;
+  text-align: center;
+}
+.messages {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  opacity: 0.5;
+  z-index: -999;
+}
+.timer {
+  margin: 0.5rem;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 4rem);
+  grid-template-rows: repeat(8, 4rem);
+  justify-content: center;
+  border: solid white 1px;
+}
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.tile img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.tile:nth-child(even):not(.different) {
+  background-color: #04bf8a;
+  color: white;
+}
+.different:nth-child(odd) {
+  background-color: #04bf8a;
+  color: white;
+}
+.hidden {
+  display: none;
+}

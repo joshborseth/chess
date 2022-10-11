@@ -1,0 +1,8 @@
+Opening Screen
+Main Game Screen
+Game Over Screen
+Instructions Screen
+Reset Functionality
+Player Name Input and on-screen display 
+Difficulty/Mode progression or selection
+Scoring Mechanism with on-screen display

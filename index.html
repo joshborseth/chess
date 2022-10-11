@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button id="open-instructions" class="open-instructions">Instructions</button>
+    <div id="instructions" class="instructions hidden">
+      <h2>Instructions</h2>
+      <p>
+        A regular game of Chess! However, pawns do not turn into anything if you get them to the end
+        of the board. Also, castling is not allowed. Lastly, if you are feeling sneaky, try to take
+        the other player's king without them even noticing they are in check! Checkmate is NOT
+        required to win in this version of Chess!
+      </p>
+    </div>
+    <section id="splash-screen" class="splash-screen">
+      <h1>Welcome to Chess</h1>
+      <label for="player-one-input">Player One Name (White)</label>
+      <input type="text" id="player-one-input" maxlength="8" />
+      <label for="player-two-input">Player Two Name (Black)</label>
+      <input type="text" id="player-two-input" maxlength="8" />
+      <form id="color-form" class="color-select">
+        <h3>Choose a Colour:</h3>
+        <div>
+          <input type="radio" id="default" name="color-select-item" />
+          <label for="default">Default</label>
+        </div>
+        <div>
+          <input type="radio" id="purple" value="purple" name="color-select-item" />
+          <label for="purple">Purple</label>
+        </div>
+        <div>
+          <input type="radio" id="gray" value="gray" name="color-select-item" />
+          <label for="gray">Gray</label>
+        </div>
+      </form>
+      <form id="mode-form" class="mode-select">
+        <h3>Choose a Mode:</h3>
+        <div>
+          <input type="radio" id="standard" value="standard" name="mode-select-item" />
+          <label for="standard">Standard</label>
+        </div>
+        <div>
+          <input type="radio" id="timed" value="timed" name="mode-select-item" />
+          <label for="timed">Speed Chess</label>
+        </div>
+      </form>
+      <button class="start-game" id="start-game">Play Game</button>
+    </section>
+    <section id="game-over-screen" class="game-over-screen hidden">
+      <h2>Game Over</h2>
+      <p id="winner-display"></p>
+      <button id="reset" class="reset">Reset</button>
+    </section>
+    <section id="game-screen" class="game-screen hidden">
+      <h2>Chess</h2>
+      <p id="player-two-timer" class="timer">60</p>
+      <div class="captured-pieces">
+        <div id="captured-black-pieces"><h3>Captured Black Pieces</h3></div>
+        <div id="captured-white-pieces"><h3>Captured White Pieces</h3></div>
+      </div>
+      <div id="board" class="board"></div>
+      <p id="player-one-timer" class="timer">60</p>
+      <div id="turn-display" class="turn-display"></div>
+      <div id="messages" class="messages hidden"></div>
+      <script src="script.js"></script>
+    </section>
+  </body>
+</html>
