@@ -243,10 +243,10 @@ const movePiece = (e) => {
       if (isGameOver) {
         return;
       }
-      if (isPlayerOnesTurn) {
+      if (isPlayerOnesTurn && mode === "timed") {
         startTimers("white");
         turnDisplayEl.innerText = `${playerOne}'s Turn (White)`;
-      } else {
+      } else if (!isPlayerOnesTurn && mode === "timed") {
         turnDisplayEl.innerText = `${playerTwo}'s Turn (Black)`;
         startTimers("black");
       }
